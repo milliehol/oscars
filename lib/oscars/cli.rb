@@ -12,9 +12,17 @@ class Oscars::CLI
     display_actor_list
     
     puts ""
-    
     puts "Please select a year in order to view the Oscar winner that year.  Please enter the number before the year."
     input = gets.strip.to_i
+    
+    if input.integer && <100
+         actor = Oscars::Actor.find(input)
+         display_actor_info(actor)
+    else
+      puts ""
+      puts "Please try again."
+      start
+    end
     
     actor = Oscars::Actor.find(input)
 
@@ -35,6 +43,7 @@ class Oscars::CLI
       puts "Please try again."
       start
     end
+    
   end
 
   def display_actor_info(actor)
