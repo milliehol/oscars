@@ -1,4 +1,4 @@
-class Test::Actor
+class Oscars::Actor
 
   attr_accessor :year, :name, :role
 
