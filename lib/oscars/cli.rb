@@ -4,10 +4,10 @@ class Oscars::CLI
   def call
     Oscars::Scraper.create_actor
     puts "Welcome to the Oscar Awards"
-    begin
+    start
   end
 
-  def begin
+  def start
     puts ""
     print_actor_list
     
@@ -25,7 +25,7 @@ class Oscars::CLI
 
     input = gets.strip.downcase
     if input == "y"
-      begin
+      start
     elsif input == "n"
       puts ""
       puts "Thank you!  The program is now ending."
@@ -33,7 +33,7 @@ class Oscars::CLI
     else
       puts ""
       puts "Please try again."
-      begin
+      start
     end
   end
 
