@@ -1,8 +1,8 @@
 
-class Test::CLI
+class Oscars::CLI
 
   def call
-    Oscar::Scraper.create_actor
+    Oscars::Scraper.create_actor
     puts "Welcome to the Oscar Awards"
     begin
   end
@@ -16,7 +16,7 @@ class Test::CLI
     puts "Please select a year in order to view the Oscar winner that year.  Please enter the number before the year."
     input = gets.strip.to_i
     
-    actor = Oscar::Actor.find(input)
+    actor = Oscars::Actor.find(input)
 
     print_actor_info(actor)
 
@@ -47,7 +47,7 @@ class Test::CLI
 
   def print_actor_list
     puts ""
-    actor = Oscar::Actor.all
+    actor = Oscars::Actor.all
     actor.each.with_index(4) {|actor, index| puts "#({index} - 3). #{actor.year}"}
     puts " "
   end
