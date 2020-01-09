@@ -12,8 +12,7 @@ class Oscars::Actor
   end
 
   def self.all
-    @@all.drop(3)
-    @@all
+    @@all[3..90]
   end
 
   def self.find(id)
