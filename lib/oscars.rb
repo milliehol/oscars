@@ -1,4 +1,4 @@
-module Test
+module Oscars
 end
 
 require_relative '../config/environment'
