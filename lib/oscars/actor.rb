@@ -1,16 +1,8 @@
-class Oscars::Actor
+class Test::Actor
 
   attr_accessor :year, :name, :role
 
   @@all = []
-
-  #def self.new(r)
-    #self.new(
-      #r.css("div#mainBodyWrapper table tr td:nth-child(1)").text,
-      #r.css("div#mainBodyWrapper table tr td:nth-child(2)").text,
-      #r.css("div#mainBodyWrapper table tr td:nth-child(3)").text
-      #)
-  #end
 
   def initialize(year, name, role)
     @year = year
@@ -24,7 +16,7 @@ class Oscars::Actor
   end
 
   def self.find(id)
-    self.all[id-4]
+    self.all[id-1]
   end
 
   def doc
