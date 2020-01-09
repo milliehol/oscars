@@ -9,7 +9,7 @@ class Oscars::CLI
 
   def start
     puts ""
-    print_actor_list
+    display_actor_list
     
     puts ""
     
@@ -18,7 +18,7 @@ class Oscars::CLI
     
     actor = Oscars::Actor.find(input)
 
-    print_actor_info(actor)
+    display_actor_info(actor)
 
     puts ""
     puts "Would you like to see another Oscar Winner? Enter Y or N"
@@ -37,7 +37,7 @@ class Oscars::CLI
     end
   end
 
-  def print_actor_info(actor)
+  def display_actor_info(actor)
     puts ""
     puts "#{actor.name}"
     puts ""
@@ -45,10 +45,10 @@ class Oscars::CLI
     puts ""
   end
 
-  def print_actor_list
+  def display_actor_list
     puts ""
     actor = Oscars::Actor.all
-    actor.each.with_index(4) {|actor, index| puts "#({index} - 3). #{actor.year}"}
+    actor.each.with_index(1) {|actor, index| puts "#{index}. #{actor.year}"}
     puts " "
   end
 
