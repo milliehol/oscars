@@ -12,7 +12,7 @@ class Oscars::Actor
   end
 
   def self.all
-    @@all.drop[3]
+    @@all.drop(3)
     @@all
   end
 
