@@ -1,6 +1,4 @@
-require "oscars/version"
-
-module Oscars
-  class Error < StandardError; end
-  # Your code goes here...
+module Test
 end
+
+require_relative '../config/environment'
