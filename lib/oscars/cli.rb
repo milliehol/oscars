@@ -4,12 +4,12 @@ class Oscars::CLI
   def call
     Oscars::Scraper.create_actor
     puts "Welcome to the Oscar Awards"
+    puts ""
+    display_actor_list
     start
   end
 
   def start
-    puts ""
-    display_actor_list
     
     puts ""
     puts "Please select a year in order to view the Oscar winner that year.  Please enter the number before the year."
@@ -29,6 +29,7 @@ class Oscars::CLI
 
     input = gets.strip.downcase
     if input == "y"
+      display_actor_list
       start
     elsif input == "n"
       puts ""
