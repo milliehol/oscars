@@ -20,7 +20,7 @@ class Oscars::CLI
        display_actor_info(actor)
     else
       puts ""
-      puts "Please enter a number between 1 and 92."
+      puts "Please enter a number between 1 and 91."
       start
     end
 
