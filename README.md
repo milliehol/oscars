@@ -1,6 +1,6 @@
 # Oscars
 
-This Gem allows you to find the actor who won an Oscar every year.  
+This Gem allows you to find out information about each actor who won an Oscar.   
 
 ## Installation
 
