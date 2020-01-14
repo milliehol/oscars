@@ -17,8 +17,8 @@ class Oscars::CLI
     
     if input.is_a?(Numeric) == true
       input2 = input.to_i
-       if inpu2 < 92 && > 0
-         actor = Oscars::Actor.find(input)
+       if input2 < 92 
+         actor = Oscars::Actor.find(input2)
          display_actor_info(actor)
        else
        puts ""
