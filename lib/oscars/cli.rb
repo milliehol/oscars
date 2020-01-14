@@ -13,16 +13,15 @@ class Oscars::CLI
     
     puts ""
     puts "Please select a year in order to view the actor who won that year.  Please enter the number before the year."
-    input = gets.strip
+    input = gets.strip.to_i
     
-    if input.is_a?(Numeric) == true
-      input2 = input.to_i
-       if input2 < 92 
-         actor = Oscars::Actor.find(input2)
+    if input > 0
+       if input < 92 
+         actor = Oscars::Actor.find(input)
          display_actor_info(actor)
        else
        puts ""
-       puts "Please enter a number between 1 and 92."
+       puts "Please enter a number between 1 and 91."
        start
        end
     else
