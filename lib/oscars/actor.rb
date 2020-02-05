@@ -19,7 +19,4 @@ class Oscars::Actor
     self.all[id-1]
   end
 
-  def doc
-    @doc ||= Nokogiri::HTML(open(self.url))
-  end
 end
