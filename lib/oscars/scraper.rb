@@ -1,10 +1,6 @@
 
 class Oscars::Scraper
 
-  def get_page
-    Nokogiri::HTML(open("https://www.filmsite.org/bestactor2.html"))
-  end
-
   def self.create_actor
     
      new_page = Nokogiri::HTML(open("https://www.filmsite.org/bestactor2.html"))
