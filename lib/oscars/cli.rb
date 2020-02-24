@@ -47,7 +47,7 @@ class Oscars::CLI
     puts ""
     actor = Oscars::Actor.all
     actor.each.with_index(1) {|actor, index| puts "#{index}. #{actor.year}"}
-    puts " "
+    puts ""
   end
 
   def display_actor_info(actor)
